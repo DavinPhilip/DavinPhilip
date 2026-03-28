@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Davin Philip | Portfolio</title>
+    <title>Davin Philip</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;800&display=swap');
@@ -19,34 +19,33 @@
 
         /* The "Pop" Animation for the Name */
         .name-pop {
-            animation: popIn 1.2s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+            animation: popIn 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
             opacity: 0;
         }
         @keyframes popIn {
-            0% { transform: scale(0.5); opacity: 0; filter: blur(10px); }
-            70% { transform: scale(1.05); opacity: 1; filter: blur(0); }
-            100% { transform: scale(1); opacity: 1; }
+            0% { transform: scale(0.6); opacity: 0; filter: blur(10px); }
+            100% { transform: scale(1); opacity: 1; filter: blur(0); }
         }
 
         .reveal {
             opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.8s ease-out;
+            transform: translateY(40px);
+            transition: all 0.9s ease-out;
         }
         .reveal.active {
             opacity: 1;
             transform: translateY(0);
         }
 
-        /* Video Container Styling */
         .video-wrapper {
             position: relative;
-            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            padding-bottom: 56.25%;
             height: 0;
             overflow: hidden;
-            border-radius: 24px;
+            border-radius: 32px;
             background: #111;
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 0 50px rgba(99, 102, 241, 0.1);
         }
         .video-wrapper iframe {
             position: absolute;
@@ -60,34 +59,29 @@
 <body>
 
     <section class="h-screen flex flex-col justify-center items-center px-6 text-center">
-        <h1 class="text-6xl md:text-9xl font-extrabold tracking-tighter name-pop">
+        <h1 class="text-6xl md:text-[10rem] font-extrabold tracking-tighter name-pop">
             Davin Philip
         </h1>
-        <p class="text-gray-500 mt-6 tracking-[0.5em] uppercase text-[10px] font-bold opacity-0" style="animation: fadeIn 1s 1s forwards;">
-            Performance & Tracking
-        </p>
         
         <div class="absolute bottom-10 animate-bounce opacity-20">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
         </div>
     </section>
 
-    <section class="min-h-screen py-20 px-6 max-w-4xl mx-auto flex flex-col justify-center reveal">
-        <h2 class="text-xs font-bold text-indigo-500 uppercase tracking-[0.4em] mb-12 text-center">Featured Case Study</h2>
-        
-        <div class="video-wrapper shadow-2xl">
+    <section class="min-h-screen py-20 px-6 max-w-5xl mx-auto flex flex-col justify-center reveal">
+        <div class="video-wrapper">
             <iframe 
                 src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
-                title="YouTube video player" 
+                title="Davin Philip Case Study" 
                 frameborder="0" 
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                 allowfullscreen>
             </iframe>
         </div>
 
-        <div class="mt-8 text-center">
-            <h3 class="text-2xl font-bold">Google Ads & Tagging Architecture</h3>
-            <p class="text-gray-400 mt-2">A technical walkthrough of my lead generation and tracking systems.</p>
+        <div class="mt-12 text-center">
+            <h2 class="text-3xl font-bold tracking-tight">Lead Gen & Tagging Architecture</h2>
+            <p class="text-gray-500 mt-4 text-lg">Systemized acquisition walkthrough.</p>
         </div>
     </section>
 
